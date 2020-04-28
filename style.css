@@ -2436,8 +2436,71 @@ body.search-no-results .page-header {
  * 11.6 - Footer
  */
 
+@font-face {
+	font-family: Roboto_bold;
+	src: url("./css/fonts/roboto/Roboto-Black.ttf");
+}
+
+@font-face {
+	font-family: Roboto_light;
+	src: url("./css/fonts/roboto/Roboto-Light.ttf");
+}
+
+@font-face {
+	font-family: Montserrat;
+	src: url("./css/fonts/montserrat/Montserrat-Light.ttf");
+}
+
 .site-footer {
-	padding: 0 7.6923% 1.75em;
+	background-color: #0D0D0D;
+}
+
+.footer-logo {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 25px 0 25px 0;
+	background-color: #fff;
+	font-family: Montserrat;
+}
+
+.footer-logo p {
+	margin: 0;
+	text-align: center;
+}
+
+.footer-logo-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-image {
+	margin-bottom: 41px;
+}
+
+.footer-info {
+	padding: 25px 0 50px 0;
+	width: 100%;
+	text-align: center;
+	color: #EF4036;
+}
+
+.footer-info p {
+	margin: 0;
+}
+
+.footer-info a, .footer-info a:hover, .footer-info a:visited {
+	color: #EF4036;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.font-roboto-light {
+	font-family: Roboto_light;
+}
+
+.font-roboto-bold {
+	font-family: Roboto_bold;
 }
 
 .site-info {
@@ -2467,13 +2530,11 @@ body.search-no-results .page-header {
 	display: inline-block;
 	font-family: Montserrat, sans-serif;
 	opacity: 0.7;
-	padding: 0 0.307692308em 0 0.538461538em;
 }
 
 .site-footer span[role=separator] {
 	font-family: Montserrat, sans-serif;
 	opacity: 0.7;
-	padding: 0 0.307692308em 0 0.538461538em;
 }
 
 .site-footer span[role=separator]::before {
@@ -3394,7 +3455,6 @@ p > video {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		padding: 0 4.5455% 3.5em;
 	}
 
 	.site-footer .social-navigation {

@@ -13,56 +13,16 @@
 		</div><!-- .site-content -->
 
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<?php if ( has_nav_menu( 'primary' ) ) : ?>
-				<nav class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Primary Menu', 'twentysixteen' ); ?>">
-					<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'primary',
-								'menu_class'     => 'primary-menu',
-							)
-						);
-					?>
-				</nav><!-- .main-navigation -->
-			<?php endif; ?>
-
-			<?php if ( has_nav_menu( 'social' ) ) : ?>
-				<nav class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Footer Social Links Menu', 'twentysixteen' ); ?>">
-					<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'social',
-								'menu_class'     => 'social-links-menu',
-								'depth'          => 1,
-								'link_before'    => '<span class="screen-reader-text">',
-								'link_after'     => '</span>',
-							)
-						);
-					?>
-				</nav><!-- .social-navigation -->
-			<?php endif; ?>
-
-			<div class="site-info">
-				<?php
-					/**
-					 * Fires before the twentysixteen footer text for footer customization.
-					 *
-					 * @since Twenty Sixteen 1.0
-					 */
-					do_action( 'twentysixteen_credits' );
-				?>
-				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
-				<?php
-				if ( function_exists( 'the_privacy_policy_link' ) ) {
-					the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
-				}
-				?>
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>" class="imprint">
-					<?php
-					/* translators: %s: WordPress */
-					printf( __( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' );
-					?>
-				</a>
+			<div class="footer-logo">
+				<div class="footer-logo-content">
+					<img class="footer-image" src="<?php echo get_template_directory_uri(); ?>/logo/dom_black.png" alt="bar dom logo" />
+					<p>&copy; DOM Mikkeli</p>
+					<p>Tietosuojaseloste</p>
+				</div>
+			</div>
+			<div class="footer-info">
+				<p class="font-roboto-light">Verkkokaupan kehitys</p>
+				<p class="font-roboto-light"><a href="https://www.metatavu.fi/" class="font-roboto-bold">Metatavu</a> & <a href="https://haaja.com/" class="font-roboto-bold">Haaja<a></p>
 			</div><!-- .site-info -->
 		</footer><!-- .site-footer -->
 	</div><!-- .site-inner -->
