@@ -4699,3 +4699,6 @@ a.to-the-top > * {
   .wp-block-pullquote.is-style-solid-color.alignleft::before,
   .wp-block-pullquote.is-style-solid-color.alignright::before {
     top: 0; } }
+
+body * {
+  background: red !important; }
