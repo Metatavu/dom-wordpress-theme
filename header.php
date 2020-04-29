@@ -49,6 +49,15 @@
 						</a>
 						<p class="header-text-line1">TAKEAWAY</p>
 						<p class="header-text-line2">VERKKOKAUPPA</p>
+						<div>
+							<img class="shopping-cart-image" src="" alt="shopping cart image">
+							<p class="shopping-cart-number">
+								<?php
+    							global $woocommerce;
+								echo $woocommerce->cart->cart_contents_count;
+								?>
+							</p>
+						</div>
 					</div><!-- .image-container -->
 					<?php if ( is_home() && is_front_page() ) : ?>
 						<div class="text-area">
