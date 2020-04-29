@@ -28,59 +28,6 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentysixteen' ); ?></a>
 
 		<header id="masthead" class="site-header" role="banner">
-			<div class="site-header-main">
-				<div class="site-branding">
-					<?php twentysixteen_the_custom_logo(); ?>
-
-					<?php if ( is_front_page() && is_home() ) : ?>
-						<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-					<?php else : ?>
-						<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-						<?php
-					endif;
-
-					$description = get_bloginfo( 'description', 'display' );
-					if ( $description || is_customize_preview() ) :
-						?>
-						<p class="site-description"><?php echo $description; ?></p>
-					<?php endif; ?>
-				</div><!-- .site-branding -->
-
-				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
-					<button id="menu-toggle" class="menu-toggle"><?php _e( 'Menu', 'twentysixteen' ); ?></button>
-
-					<div id="site-header-menu" class="site-header-menu">
-						<?php if ( has_nav_menu( 'primary' ) ) : ?>
-							<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'twentysixteen' ); ?>">
-								<?php
-									wp_nav_menu(
-										array(
-											'theme_location' => 'primary',
-											'menu_class' => 'primary-menu',
-										)
-									);
-								?>
-							</nav><!-- .main-navigation -->
-						<?php endif; ?>
-
-						<?php if ( has_nav_menu( 'social' ) ) : ?>
-							<nav id="social-navigation" class="social-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Social Links Menu', 'twentysixteen' ); ?>">
-								<?php
-									wp_nav_menu(
-										array(
-											'theme_location' => 'social',
-											'menu_class'  => 'social-links-menu',
-											'depth'       => 1,
-											'link_before' => '<span class="screen-reader-text">',
-											'link_after'  => '</span>',
-										)
-									);
-								?>
-							</nav><!-- .social-navigation -->
-						<?php endif; ?>
-					</div><!-- .site-header-menu -->
-				<?php endif; ?>
-			</div><!-- .site-header-main -->
 
 			<?php if ( get_header_image() ) : ?>
 				<?php
@@ -95,11 +42,39 @@
 					 */
 					$custom_header_sizes = apply_filters( 'twentysixteen_custom_header_sizes', '(max-width: 709px) 85vw, (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px' );
 				?>
-				<div class="header-image">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-						<img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id ) ); ?>" sizes="<?php echo esc_attr( $custom_header_sizes ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-					</a>
-				</div><!-- .header-image -->
+					<div class="image-container">
+						<img class="header-image" src="<?php echo get_template_directory_uri(); ?>/logo/header_background.png" alt="header background" />
+						<a href="http://localhost/index.php/">
+							<img class="header-logo" src="<?php echo get_template_directory_uri(); ?>/logo/dom_white.png" alt="bar dom logo" />
+						</a>
+						<p class="header-text-line1">TAKEAWAY</p>
+						<p class="header-text-line2">VERKKOKAUPPA</p>
+					</div><!-- .image-container -->
+					<?php if ( is_home() && is_front_page() ) : ?>
+						<div class="text-area">
+							<p class="text-area-header">Tilaa täältä ja nouda DOMista</p>
+							<p class="text-area-content">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+						</div><!-- .text-area -->
+					<?php endif; ?>
+
+					<?php if ( is_home() && is_front_page() ) : ?>
+						<body>
+							<div id="site-menu" class="site-menu">
+								<a href="http://localhost/index.php/product-category/beers/">
+									<img src="<?php echo get_template_directory_uri(); ?>/logo/beer.png" alt="beer image" style="width:300px;height:302px;padding:10px;">
+									<p class="menu-item" style="top:45%;left:24%;">Oluet</p> <!-- Those imbedded styles are for demonstration purpose only, they break upon page resizing -->
+								</a>
+								<a href="http://localhost/index.php/product-category/beers/">
+									<img src="<?php echo get_template_directory_uri(); ?>/logo/cider.png" alt="beer image" style="width:300px;height:302px;padding:10px;">
+									<p class="menu-item" style="top:45%;left:46%;">Siiderit</p> <!-- Those imbedded styles are for demonstration purpose only, they break upon page resizing -->
+								</a>
+								<a href="http://localhost/index.php/product-category/beers/">
+									<img src="<?php echo get_template_directory_uri(); ?>/logo/long.png" alt="beer image" style="width:300px;height:302px;padding:10px;">
+									<p class="menu-item" style="top:45%;left:67%;">Long drinkit</p> <!-- Those imbedded styles are for demonstration purpose only, they break upon page resizing -->
+								</a>
+							</div><!-- .site-header-menu -->
+						</body>
+					<?php endif; ?>
 			<?php endif; // End header image check. ?>
 		</header><!-- .site-header -->
 
