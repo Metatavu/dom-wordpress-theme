@@ -4700,5 +4700,6 @@ a.to-the-top > * {
   .wp-block-pullquote.is-style-solid-color.alignright::before {
     top: 0; } }
 
-body * {
-  background: red !important; }
+/* Put all custom styles below */
+/* MAKE SURE YOU HAVE SCSS COMPILE RUNNING */
+/* npx node-sass -w style.scss -o . */
