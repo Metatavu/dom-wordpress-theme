@@ -1750,6 +1750,24 @@ blockquote:after,
 	font-size: 10px;
 }
 
+.shopping-cart-image {
+	position: absolute;
+  	top: 8%;
+  	left: 94%;
+  	transform: translate(-50%, -50%);
+}
+
+.shopping-cart-number {
+	font-family: Montserrat_bold;
+	letter-spacing: 0px;
+	color: #FFFFFF;
+	font-size: 30px;
+	position: absolute;
+  	top: 8%;
+  	left: 97%;
+  	transform: translate(-50%, -50%);
+}
+
 .header-image a {
 	display: block;
 }
