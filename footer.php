@@ -15,14 +15,14 @@
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="footer-logo">
 					<div class="footer-logo-content">
-						<img class="footer-image" src="<?php echo get_stylesheet_directory_uri(); ?>/logo/dom_black.png" alt="bar dom logo" />
+						<img class="footer-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/DOM-bar-logo.svg" alt="bar dom logo" />
 						<p>&copy; DOM Mikkeli</p>
 						<p>Tietosuojaseloste</p>
 					</div>
 				</div>
 				<div class="footer-info">
-					<p class="font-roboto-light">Verkkokaupan kehitys</p>
-					<p class="font-roboto-light"><a href="https://www.metatavu.fi/" class="font-roboto-bold">Metatavu</a> & <a href="https://haaja.com/" class="font-roboto-bold">Haaja<a></p>
+					<p>Verkkokaupan kehitys</p>
+					<p><a href="https://www.metatavu.fi/" class="font-roboto-bold">Metatavu</a> & <a href="https://haaja.com/" class="font-roboto-bold">Haaja<a></p>
 				</div><!-- .site-info -->
 			</footer><!-- .site-footer -->
 
