@@ -11,6 +11,8 @@
   Text Domain:  dom
 */
 
+@import "theme";
+@import "fonts";
 @import "original";
 
 /* Put all custom styles below */
@@ -18,3 +20,274 @@
 /* MAKE SURE YOU HAVE SCSS COMPILE RUNNING */
 /* npx node-sass -w style.scss -o . */
 
+/* TwentyTwenty overrides: */
+
+body {
+  font-family: $font-text;
+}
+
+.singular .entry-header {
+  padding: 0
+}
+
+.entry-content {
+  font-family: $font-text;
+  & h1, h2, h3 {
+    font-family: $font-header;
+    font-weight: normal;
+  }
+  & h4, h5, h6 {
+    font-family: $font-text-header;
+    font-weight: normal;
+  }
+}
+
+/* WOOCOMMERCE Custom: */
+
+.front-page .woocommerce {
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.front-page .woocommerce ul.products li.product-category a h2.woocommerce-loop-category__title {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: $font-text-header;
+  color: $color-text-light;
+  text-decoration: none;
+}
+
+.front-page .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+	margin: 0 25px 0 0;
+}
+
+.front-page .woocommerce ul.products li.product-category a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+	justify-content: center;
+	transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+	&:hover {
+		transform: scale(1.1);
+		box-shadow: 0 0 50px rgba(0,0,0,0.2);
+	}
+}
+
+/* Other customs */
+
+.front-page {
+  overflow: visible;
+  padding-bottom: 50px;
+}
+
+.shopping-cart {
+  position: absolute;
+  top: 0;
+	right: 0;
+	padding: 15px;
+	display: flex;
+	text-decoration: none;
+	transition: transform 0.2s ease-out;
+	& img {
+		height: 45px;
+		position: relative;
+		transform: none;
+		margin-right: 16px;
+	}
+	& p {
+		margin: 0;
+		font-family: $font-text-header;
+		font-size: 30px;
+		color: $color-text-light;
+		text-decoration: none;
+	}
+	&:hover {
+		transform: scale(1.1);
+	}
+}
+
+.site-inner {
+	margin: 0 auto;
+  position: relative;
+  max-width: none;
+}
+
+.image-container {
+	position: relative;
+  text-align: center;
+  background-color: #000;
+}
+
+.header-logo {
+	position: absolute;
+	max-height: 31%;
+  	width: auto;
+  	top: 34%;
+  	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.header-text-line1 {
+	font-family: $font-header;
+	letter-spacing: 0px;
+	color: $color-primary;
+	font-size: 70px;
+	position: absolute;
+  	top: 60%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+.header-text-line2 {
+	font-family: $font-header;
+	letter-spacing: 0px;
+	color: $color-text-light;
+	font-size: 48px;
+	position: absolute;
+  	top: 75%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+.header-image {
+  width: 100%;
+  opacity: 0.63;
+}
+
+.text-area {
+	background-color: #0D0D0D;
+	height: 90%;
+	text-align: center;
+	padding: 3% 28% 4% 28%;
+	width: 100%;
+}
+
+.text-area-header {
+	font-family: $font-text-header;
+	letter-spacing: 0px;
+	color: #EF4036;
+	font-size: 20px;
+}
+
+.text-area-content {
+	font-family: $font-text;
+	letter-spacing: 0px;
+	color: #E2E2E2;
+	font-size: 10px;
+}
+
+.header-image a {
+	display: block;
+}
+
+.site-menu {
+	position: relative;
+	text-align: center;
+}
+
+.menu-item {
+	font-family: $font-text-header;
+	letter-spacing: 0px;
+	color: #FFFFFF;
+	font-size: 30px;
+	position: absolute;
+}
+
+/**
+ * 11.6 - Footer
+ */
+
+.site-footer {
+	background-color: #0D0D0D;
+}
+
+.footer-logo {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 25px 0 25px 0;
+	background-color: #fff;
+	font-family: Montserrat;
+}
+
+.footer-logo p {
+	margin: 0;
+	text-align: center;
+}
+
+.footer-logo-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-image {
+	margin-bottom: 41px;
+}
+
+.footer-info {
+	padding: 25px 0 50px 0;
+	width: 100%;
+	text-align: center;
+	color: #EF4036;
+}
+
+.footer-info p {
+	margin: 0;
+}
+
+.footer-info a, .footer-info a:hover, .footer-info a:visited {
+	color: #EF4036;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.font-roboto-light {
+	font-family: Roboto_light;
+}
+
+.font-roboto-bold {
+	font-family: Roboto_bold;
+}
+
+.site-info {
+	color: #686868;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	line-height: 1.6153846154;
+}
+
+.site-info a {
+	color: #686868;
+}
+
+.site-info a:hover,
+.site-info a:focus {
+	color: #007acc;
+}
+
+.site-footer .site-title {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: 400;
+}
+
+.site-footer .site-title:after {
+	content: "\002f";
+	display: inline-block;
+	font-family: Montserrat, sans-serif;
+	opacity: 0.7;
+}
+
+.site-footer span[role=separator] {
+	font-family: Montserrat, sans-serif;
+	opacity: 0.7;
+}
+
+.site-footer span[role=separator]::before {
+	content: '\002f';
+}

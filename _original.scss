@@ -108,7 +108,7 @@ body {
 	background: #f5efe0;
 	box-sizing: border-box;
 	color: #000;
-	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	font-family: $font-text;
 	font-size: 1.8rem;
 	letter-spacing: -0.015em;
 	text-align: left;
@@ -117,7 +117,7 @@ body {
 @supports ( font-variation-settings: normal ) {
 
 	body {
-		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+		font-family: $font-text;
 	}
 }
 
@@ -435,8 +435,7 @@ hr.styled-separator::after {
 }
 
 a {
-	color: #cd2653;
-	text-decoration: underline;
+	color: $color-primary;
 }
 
 a:hover,
@@ -518,7 +517,7 @@ dd + dt {
 /* Quotes ------------------------------------ */
 
 blockquote {
-	border-color: #cd2653;
+	border-color: $color-primary;
 	border-style: solid;
 
 	/*rtl:ignore*/
@@ -815,7 +814,7 @@ input[type="reset"],
 input[type="submit"] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	background: #cd2653;
+	background: $color-primary;
 	border: none;
 	border-radius: 0;
 	color: #fff;
@@ -1071,7 +1070,7 @@ button.toggle {
 .color-accent,
 .color-accent-hover:focus,
 .color-accent-hover:hover {
-	color: #cd2653;
+	color: $color-primary;
 }
 
 /* BACKGROUND COLOR */
@@ -1079,7 +1078,7 @@ button.toggle {
 .bg-accent,
 .bg-accent-hover:focus,
 .bg-accent-hover:hover {
-	background-color: #cd2653;
+	background-color: $color-primary;
 }
 
 /* BORDER COLOR */
@@ -1087,14 +1086,14 @@ button.toggle {
 .border-color-accent,
 .border-color-accent-hover:focus,
 .border-color-accent-hover:hover {
-	border-color: #cd2653;
+	border-color: $color-primary;
 }
 
 /* FILL COLOR */
 
 .fill-children-accent,
 .fill-children-accent * {
-	fill: #cd2653;
+	fill: $color-primary;
 }
 
 .fill-children-current-color,
@@ -1284,7 +1283,7 @@ ul.social-icons li {
 
 .social-icons a {
 	align-items: center;
-	background: #cd2653;
+	background: $color-primary;
 	border-radius: 50%;
 	color: #fff;
 	display: flex;
@@ -2278,58 +2277,6 @@ body.template-cover .entry-header {
 /*	7c. Template: Full Width
 /* -------------------------------------------------------------------------- */
 
-
-body.template-full-width .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide),
-body.template-full-width [class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-	max-width: 120rem;
-}
-
-body.template-full-width .entry-content .alignleft,
-body.template-full-width .entry-content .alignright {
-	position: static;
-}
-
-body.template-full-width .entry-content .alignleft,
-body.template-full-width [class*="wp-block"].alignwide [class*="__inner-container"] > .alignleft,
-body.template-full-width [class*="wp-block"].alignwide [class*="__inner-container"] > p .alignleft,
-body.template-full-width [class*="wp-block"].alignwide [class*="__inner-container"] > .wp-block-image .alignleft {
-
-	/*rtl:ignore*/
-	margin-left: 0;
-	position: static;
-}
-
-body.template-full-width .entry-content > .alignleft,
-body.template-full-width [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignleft,
-body.template-full-width [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignleft,
-body.template-full-width [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignleft {
-
-	/*rtl:ignore*/
-	margin-left: 2rem;
-	position: static;
-}
-
-body.template-full-width .entry-content .alignright,
-body.template-full-width [class*="wp-block"].alignwide [class*="__inner-container"] > .alignright,
-body.template-full-width [class*="wp-block"].alignwide [class*="__inner-container"] > p .alignright,
-body.template-full-width [class*="wp-block"].alignwide [class*="__inner-container"] > .wp-block-image .alignright {
-
-	/*rtl:ignore*/
-	margin-right: 0;
-	position: static;
-}
-
-body.template-full-width .entry-content > .alignright,
-body.template-full-width [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .alignright,
-body.template-full-width [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > p .alignright,
-body.template-full-width [class*="wp-block"].alignfull:not(.has-background) [class*="__inner-container"] > .wp-block-image .alignright {
-
-	/*rtl:ignore*/
-	margin-right: 2rem;
-	position: static;
-}
-
-
 /* -------------------------------------------------------------------------- */
 
 /*	8. Post: Archive
@@ -2723,11 +2670,11 @@ h2.entry-title {
 /* CUSTOM COLORS */
 
 :root .has-accent-color {
-	color: #cd2653;
+	color: $color-primary;
 }
 
 :root .has-accent-background-color {
-	background-color: #cd2653;
+	background-color: $color-primary;
 	color: #fff;
 }
 
@@ -2785,8 +2732,8 @@ h2.entry-title {
 }
 
 .has-drop-cap:not(:focus)::first-letter {
-	color: #cd2653;
-	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+	color: $color-primary;
+	font-family: $font-text;
 	font-size: 5.1em;
 	font-weight: 800;
 	margin: 0.05em 0.1em 0 0;
@@ -3004,7 +2951,7 @@ h2.entry-title {
 }
 
 .wp-block-button.is-style-outline {
-	color: #cd2653;
+	color: $color-primary;
 }
 
 .is-style-outline .wp-block-button__link:not(.has-text-color) {
@@ -3039,8 +2986,8 @@ h2.entry-title {
 
 .wp-block-cover-image .wp-block-cover__inner-container,
 .wp-block-cover .wp-block-cover__inner-container {
-	width: calc(100% - 4rem);
-	padding: 2rem 0;
+	width: 100%;
+	padding: 0;
 }
 
 .wp-block-cover-image .wp-block-cover-image-text,
@@ -3190,7 +3137,7 @@ figure.wp-block-gallery.alignfull {
 .wp-block-pullquote::before {
 	background: #fff;
 	border-radius: 50%;
-	color: #cd2653;
+	color: $color-primary;
 	content: "”";
 	display: block;
 	font-size: 6.2rem;
@@ -3508,56 +3455,7 @@ figure.wp-block-table.is-style-stripes {
 
 /* Font Families ----------------------------- */
 
-.entry-content {
-	font-family: NonBreakingSpaceOverride, "Hoefler Text", Garamond, "Times New Roman", serif;
-	letter-spacing: normal;
-}
-
-.entry-content h1,
-.entry-content h2,
-.entry-content h3,
-.entry-content h4,
-.entry-content h5,
-.entry-content h6,
-.entry-content cite,
-.entry-content figcaption,
-.entry-content table,
-.entry-content address,
-.entry-content .wp-caption-text,
-.entry-content .wp-block-file {
-	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-}
-
-@supports ( font-variation-settings: normal ) {
-
-	.entry-content h1,
-	.entry-content h2,
-	.entry-content h3,
-	.entry-content h4,
-	.entry-content h5,
-	.entry-content h6,
-	.entry-content cite,
-	.entry-content figcaption,
-	.entry-content table,
-	.entry-content address,
-	.entry-content .wp-caption-text,
-	.entry-content .wp-block-file {
-		font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
-	}
-}
-
-
 /* Alignment Classes ------------------------- */
-
-.entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-	max-width: 58rem;
-	width: calc(100% - 4rem);
-}
-
-[class*="__inner-container"] > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-	max-width: 58rem;
-	width: 100%;
-}
 
 .alignnone,
 .aligncenter,
@@ -3805,7 +3703,7 @@ div.comment:first-of-type {
 }
 
 .comment-reply-link {
-	background-color: #cd2653;
+	background-color: $color-primary;
 	color: #fff;
 	display: block;
 	padding: 0.7rem;
@@ -4420,7 +4318,7 @@ ul.footer-social li {
 }
 
 .footer-social a {
-	background-color: #cd2653;
+	background-color: $color-primary;
 	height: 3.6rem;
 	width: 3.6rem;
 }
@@ -4987,31 +4885,6 @@ a.to-the-top > * {
 	}
 
 	/* Template: Full Width ------------------ */
-
-	body.template-full-width .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide) {
-		width: calc(100% - 8rem);
-	}
-
-	body.template-full-width .alignfull:not(.has-background) > .wp-block-group__inner-container > p:not(.has-background-color) {
-		padding-left: 4rem;
-		padding-right: 4rem;
-	}
-
-	body.template-full-width [class*="wp-block"].alignfull [class*="__inner-container"] > .alignleft,
-	body.template-full-width [class*="wp-block"].alignfull [class*="__inner-container"] > p .alignleft,
-	body.template-full-width [class*="wp-block"].alignfull [class*="__inner-container"] > .wp-block-image .alignleft {
-
-		/*rtl:ignore*/
-		margin-left: 4rem;
-	}
-
-	body.template-full-width [class*="wp-block"].alignfull [class*="__inner-container"] > .alignright,
-	body.template-full-width [class*="wp-block"].alignfull [class*="__inner-container"] > p .alignright,
-	body.template-full-width [class*="wp-block"].alignfull [class*="__inner-container"] > .wp-block-image .alignright {
-
-		/*rtl:ignore*/
-		margin-right: 4rem;
-	}
 
 	/* Post: Archive ------------------------- */
 
