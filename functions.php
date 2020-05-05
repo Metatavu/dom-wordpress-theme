@@ -1,15 +1,6 @@
 <?php
 
 	/**
-	 * WOOCOMMERCE SUPPORT
-	 */
-
-	function mytheme_add_woocommerce_support() {
-		add_theme_support( 'woocommerce' );
-	}
-	add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
-	
-	/**
 	 * Hide category product count in product archives
 	 */
 	add_filter( 'woocommerce_subcategory_count_html', '__return_false' );
