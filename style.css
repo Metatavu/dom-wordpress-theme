@@ -6,7 +6,7 @@
   Author:       Metatavu Oy
   Author URI:   https://metatavu.fi
   Template:     twentytwenty
-  Version:      0.0.1
+  Version:      1.0.0
   License:      GNU Affero General Public License v3
   License URI:  https://www.gnu.org/licenses/agpl-3.0.en.html
   Text Domain:  dom
@@ -619,7 +619,7 @@ button,
 .faux-button,
 .wp-block-button__link,
 .wp-block-file__button {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Montserrat_bold";
   line-height: 1; }
 
 @supports (font-variation-settings: normal) {
@@ -631,7 +631,7 @@ button,
   .faux-button.more-link,
   .wp-block-button__link,
   .wp-block-file__button {
-    font-family: "Inter var", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif; } }
+    font-family: "Montserrat_bold"; } }
 
 input,
 textarea {
@@ -724,26 +724,7 @@ input[type="submit"] {
   padding: 1.1em 1.44em;
   text-align: center;
   text-decoration: none;
-  text-transform: uppercase;
   transition: opacity 0.15s linear; }
-
-button:focus,
-button:hover,
-.button:focus,
-.button:hover,
-.faux-button:focus,
-.faux-button:hover,
-.wp-block-button .wp-block-button__link:focus,
-.wp-block-button .wp-block-button__link:hover,
-.wp-block-file .wp-block-file__button:focus,
-.wp-block-file .wp-block-file__button:hover,
-input[type="button"]:focus,
-input[type="button"]:hover,
-input[type="reset"]:focus,
-input[type="reset"]:hover,
-input[type="submit"]:focus,
-input[type="submit"]:hover {
-  text-decoration: underline; }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
@@ -760,7 +741,7 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  border-color: currentColor; }
+  border-color: #EF4036; }
 
 input[type="search"]:focus {
   outline: thin dotted;
@@ -2445,10 +2426,6 @@ h2.entry-title {
 .wp-block-file a:not(.wp-block-file__button):not(:last-child) {
   margin-right: 1rem; }
 
-.wp-block-file a:not(.wp-block-file__button):focus,
-.wp-block-file a:not(.wp-block-file__button):hover {
-  text-decoration: underline; }
-
 .wp-block-file .wp-block-file__button {
   font-size: 1.5rem;
   padding: 1em 1.25em; }
@@ -2459,8 +2436,7 @@ h2.entry-title {
 .wp-block-file a.wp-block-file__button:active,
 .wp-block-file a.wp-block-file__button:focus,
 .wp-block-file a.wp-block-file__button:hover {
-  opacity: 1;
-  text-decoration: underline; }
+  opacity: 1; }
 
 /* Block: Gallery ---------------------------- */
 .wp-block-gallery ul {
@@ -4632,10 +4608,29 @@ a.to-the-top > * {
 /* npx node-sass -w style.scss -o . */
 /* TwentyTwenty overrides: */
 body {
-  font-family: "Roboto_light"; }
+  font-family: "Roboto_light";
+  background: #F2F2F2; }
 
 .singular .entry-header {
   padding: 0; }
+
+.site-main a {
+  color: #EF4036; }
+
+.woocommerce-terms-and-conditions-wrapper a {
+  color: #EF4036; }
+
+.wc-proceed-to-checkout .button,
+.place-order .button.alt {
+  background-color: #EF4036; }
+
+h1, h2, h3 {
+  font-family: "Montserrat_black";
+  font-weight: normal; }
+
+h4, h5, h6 {
+  font-family: "Montserrat_bold";
+  font-weight: normal; }
 
 .entry-content {
   font-family: "Roboto_light"; }
@@ -4646,11 +4641,41 @@ body {
     font-family: "Montserrat_bold";
     font-weight: normal; }
 
+.entry-title {
+  font-family: "Montserrat_black"; }
+
+article.page {
+  background-color: #fff; }
+
 /* WOOCOMMERCE Custom: */
+.single-product .woocommerce-message,
+.woocommerce-notices-wrapper .woocommerce-message {
+  background-color: #EF4036;
+  color: #fff;
+  flex-direction: row-reverse;
+  padding: 1em; }
+  @media (min-width: 768px) {
+    .single-product .woocommerce-message,
+    .woocommerce-notices-wrapper .woocommerce-message {
+      font-size: 20px;
+      padding: 1.5rem 3rem; } }
+  .single-product .woocommerce-message a.button.wc-forward,
+  .woocommerce-notices-wrapper .woocommerce-message a.button.wc-forward {
+    background-color: #fff;
+    color: #000;
+    padding: 1em; }
+
+@media only screen and (max-width: 768px) and (min-width: 668px) {
+  .woocommerce ul.products[class*=columns-] li.product:nth-of-type(2n+1), .woocommerce-page ul.products[class*=columns-] li.product:nth-of-type(2n+1),
+  .woocommerce ul.products[class*=columns-] li.product:nth-of-type(2n), .woocommerce-page ul.products[class*=columns-] li.product:nth-of-type(2n) {
+    padding: 1em; } }
+
 .front-page .woocommerce {
   margin: 0 auto;
   max-width: 1200px;
   width: 100%; }
+  .front-page .woocommerce .products {
+    justify-content: center; }
 
 .front-page .woocommerce ul.products li.product-category a h2.woocommerce-loop-category__title {
   position: absolute;
@@ -4661,8 +4686,30 @@ body {
   color: #fff;
   text-decoration: none; }
 
-.front-page .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
-  margin: 0 25px 0 0; }
+.front-page .woocommerce ul.products li.product {
+  margin: 0 0 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  @media (min-width: 768px) {
+    .front-page .woocommerce ul.products li.product {
+      margin-right: 25px; } }
+  @media (min-width: 1200px) {
+    .front-page .woocommerce ul.products li.product {
+      margin-right: 25px; } }
+  .front-page .woocommerce ul.products li.product.last {
+    margin-right: 0; }
+
+.woocommerce-page ul.products li.product {
+  background-color: #fff;
+  margin: 0 25px 25px 0;
+  padding: 25px; }
+  .woocommerce-page ul.products li.product.last {
+    margin-right: 0; }
+
+.woocommerce-product-gallery__image {
+  display: flex;
+  justify-content: center; }
 
 .front-page .woocommerce ul.products li.product-category a {
   position: relative;
@@ -4673,18 +4720,106 @@ body {
   justify-content: center;
   transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; }
   .front-page .woocommerce ul.products li.product-category a:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2); }
+    transform: scale(1.025);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1); }
+
+ul.tabs.wc-tabs {
+  display: none; }
+
+section.related.products h2 {
+  margin-top: 0; }
+
+.woocommerce ul.products {
+  justify-content: center; }
+
+.single-product div.product {
+  padding: 20px;
+  background-color: #fff; }
+  @media (min-width: 768px) {
+    .single-product div.product {
+      padding: 45px; } }
+
+.single-product .entry-title {
+  font-family: "Montserrat_bold";
+  font-size: 35px; }
+
+ul.products li.product .woocommerce-loop-product__link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none; }
+
+ul.products li.product .woocommerce-loop-product__title {
+  font-family: "Roboto_bold";
+  font-size: 19px;
+  width: 100%; }
+
+ul.products li.product .price,
+ul.products li.product .star-rating {
+  width: 100%; }
+
+form.cart {
+  display: flex;
+  flex-direction: column;
+  width: 162px; }
+  form.cart .button.alt {
+    margin: 0 !important;
+    background-color: #EF4036;
+    font-size: 12px; }
+
+.qib-container {
+  display: flex !important;
+  height: 42px; }
+
+.qib-button {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 30% !important;
+  height: auto !important;
+  color: #EF4036 !important;
+  background-color: #fff !important;
+  border: 1px solid #E1E1E1 !important;
+  font-family: "Montserrat_black"; }
+
+.qib-container div.quantity {
+  display: flex !important;
+  width: 60% !important; }
+
+.input-text.qty.text {
+  border-top: 1px solid #E1E1E1 !important;
+  border-bottom: 1px solid #E1E1E1 !important;
+  border-left: 0 !important;
+  border-right: 0 !important;
+  width: 100% !important;
+  height: auto !important; }
 
 /* Other customs */
 .front-page {
   overflow: visible;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  background-color: #F2F2F2; }
+  .front-page article.page {
+    background-color: #F2F2F2; }
+
+.inner-page {
+  padding: 50px; }
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #222;
+  display: flex;
+  justify-content: flex-end; }
 
 .shopping-cart {
-  position: absolute;
-  top: 0;
-  right: 0;
   padding: 15px;
   display: flex;
   text-decoration: none;
@@ -4701,49 +4836,41 @@ body {
     color: #fff;
     text-decoration: none; }
   .shopping-cart:hover {
-    transform: scale(1.1); }
+    transform: scale(1.05); }
 
 .site-inner {
+  height: 40vh;
   margin: 0 auto;
   position: relative;
   max-width: none; }
+  @media (min-width: 768px) {
+    .site-inner {
+      height: auto; } }
+  .site-inner header {
+    height: 100%; }
 
 .image-container {
+  height: 100%;
   position: relative;
   text-align: center;
   background-color: #000; }
 
 .header-logo {
   position: absolute;
-  max-height: 31%;
-  width: auto;
-  top: 34%;
+  top: 50%;
   left: 50%;
+  width: 80%;
+  height: auto;
   transform: translate(-50%, -50%); }
+  @media (min-width: 768px) {
+    .header-logo {
+      width: 30%; } }
 
-.header-text-line1 {
-  font-family: "Montserrat_black";
-  letter-spacing: 0px;
-  color: #EF4036;
-  font-size: 70px;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
-.header-text-line2 {
-  font-family: "Montserrat_black";
-  letter-spacing: 0px;
-  color: #fff;
-  font-size: 48px;
-  position: absolute;
-  top: 75%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
-.header-image {
+.header-image,
+.woocommerce .header-image {
   width: 100%;
-  opacity: 0.63; }
+  object-fit: none;
+  height: 100%; }
 
 .text-area {
   background-color: #0D0D0D;
@@ -4789,12 +4916,17 @@ body {
   display: flex;
   justify-content: center;
   padding: 25px 0 25px 0;
-  background-color: #fff;
-  font-family: Montserrat; }
-
-.footer-logo p {
-  margin: 0;
-  text-align: center; }
+  background-color: #F2F2F2; }
+  .footer-logo p {
+    margin: 0;
+    text-align: center;
+    font-family: "Roboto_light"; }
+  .footer-logo a {
+    color: #000;
+    font-family: "Roboto_light";
+    text-decoration: none; }
+    .footer-logo a:hover {
+      text-decoration: underline; }
 
 .footer-logo-content {
   display: flex;
