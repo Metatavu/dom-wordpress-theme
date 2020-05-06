@@ -12,7 +12,7 @@
 get_header();
 ?>
 
-<main id="site-content" role="main" class="<?php if ( is_front_page() ) { echo 'front-page';}?>">
+<main id="site-content" role="main" class="<?php if ( is_front_page() ) { echo 'front-page'; } else { echo 'inner-page'; }?>">
 	<?php
 
 	if ( have_posts() ) {

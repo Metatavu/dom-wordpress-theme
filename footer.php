@@ -17,7 +17,7 @@
 					<div class="footer-logo-content">
 						<img class="footer-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/DOM-bar-logo.svg" alt="bar dom logo" />
 						<p>&copy; DOM Mikkeli</p>
-						<p>Tietosuojaseloste</p>
+						<a href="<?php echo home_url();?>/privacy-policy">Tietosuojaseloste</a>
 					</div>
 				</div>
 				<div class="footer-info">

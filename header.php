@@ -30,22 +30,22 @@
 		<header id="site-header" class="header-footer-group" role="banner">
 
 			<div class="image-container">
-				<img class="header-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/header_background.png" alt="header background" />
-				<a href="<?php echo home_url(); ?>">
-					<img class="header-logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/DOM-bar-logo-white.svg" alt="bar dom logo" />
+				<img class="header-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/bar-dom-verkkokauppa.jpg" alt="bar dom header background" />
+				<a class="header-logo" href="<?php echo home_url(); ?>">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/dom-logo.svg" alt="bar dom verkkokauppa takeaway" />
 				</a>
-				<p class="header-text-line1">TAKEAWAY</p>
-				<p class="header-text-line2">VERKKOKAUPPA</p>
-				<!-- Shopping cart link -->
-				<a class="shopping-cart" href="<?php echo wc_get_cart_url(); ?>">
-					<img class="shopping-cart-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/ostoskori.svg" alt="shopping cart image">
-					<p class="shopping-cart-number">
-						<?php
-							global $woocommerce;
-						echo $woocommerce->cart->cart_contents_count;
-						?>
-					</p>
-				</a>
+				<div class="top-bar">
+					<!-- Shopping cart link -->
+					<a class="shopping-cart" href="<?php echo wc_get_cart_url(); ?>">
+						<img class="shopping-cart-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/ostoskori.svg" alt="shopping cart image">
+						<p class="shopping-cart-number">
+							<?php
+								global $woocommerce;
+							echo $woocommerce->cart->cart_contents_count;
+							?>
+						</p>
+					</a>
+				</div>
 			</div><!-- .image-container -->
 
 		</header><!-- #site-header -->
