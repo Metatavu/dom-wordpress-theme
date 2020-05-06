@@ -33,5 +33,50 @@
 		}
 		return $html;
 	}
+
+	/**
+	 * Display WooCommerce categories
+	 */
+	function woocommerce_product_category( $args = array() ) {
+		$woocommerce_category_id = get_queried_object_id();
+		$args = array(
+				'parent' => $woocommerce_category_id
+		);
+		$terms = get_terms( 'product_cat', $args );
+		if ( $terms ) {
+			echo '<ul class="woocommerce-categories">';
+			foreach ( $terms as $term ) {
+				echo '<li class="woocommerce-product-category-page">';
+				//woocommerce_subcategory_thumbnail( $term );
+				echo '<a href="' .  esc_url( get_term_link( $term ) ) . '" class="' . $term->slug . '">';
+				echo $term->name;
+				echo '</a>';
+				echo '</li>';
+			}
+			echo '</ul>';
+		}
+	}
+	add_action( 'woocommerce_before_shop_loop', 'woocommerce_product_category', 100 );
+
+	/**
+	 * Display WooCommerce subcategories
+	 */
+	function woocommerce_get_product_category_of_subcategories( $category_slug ){
+		$terms_html = array();
+		$taxonomy = 'product_cat';
+		
+		$parent = get_term_by( 'slug', $category_slug, $taxonomy );
+		
+		$children_ids = get_term_children( $parent->term_id, $taxonomy );
+			
+		foreach($children_ids as $children_id){
+				$term = get_term( $children_id, $taxonomy ); 
+				$term_link = get_term_link( $term, $taxonomy ); 
+				if ( is_wp_error( $term_link ) ) $term_link = '';
+				
+				$terms_html[] = '<a href="' . esc_url( $term_link ) . '" rel="tag" class="' . $term->slug . '">' . $term->name . '</a>';
+		}
+		return '<span class="subcategories-' . $category_slug . '">' . implode( ', ', $terms_html ) . '</span>';
+	}
 	
 ?>
