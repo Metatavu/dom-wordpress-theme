@@ -72,7 +72,7 @@
 	add_action( 'woocommerce_before_shop_loop_item', 'before_shop_item_div', 100 );
 	add_action( 'woocommerce_before_shop_loop_item_title', 'before_shop_item_title_div', 100 );
 	add_action( 'woocommerce_after_shop_loop_item', 'after_shop_item_div', 100 );
-
+	
 	/**
 	 * Display WooCommerce subcategories
 	 */
@@ -93,5 +93,5 @@
 		}
 		return '<span class="subcategories-' . $category_slug . '">' . implode( ', ', $terms_html ) . '</span>';
 	}
-	
+
 ?>
