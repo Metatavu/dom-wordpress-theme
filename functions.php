@@ -44,10 +44,9 @@
 		);
 		$terms = get_terms( 'product_cat', $args );
 		if ( $terms ) {
-			echo '<ul class="woocommerce-categories">';
+			echo '<ul class="subcategory-list">';
 			foreach ( $terms as $term ) {
-				echo '<li class="woocommerce-product-category-page">';
-				//woocommerce_subcategory_thumbnail( $term );
+				echo '<li class="sub-item">';
 				echo '<a href="' .  esc_url( get_term_link( $term ) ) . '" class="' . $term->slug . '">';
 				echo $term->name;
 				echo '</a>';
@@ -56,7 +55,8 @@
 			echo '</ul>';
 		}
 	}
-	add_action( 'woocommerce_before_shop_loop', 'woocommerce_product_category', 100 );
+	add_action( 'woocommerce_archive_description', 'woocommerce_product_category', 100 );
+	add_action( 'woocommerce_after_main_content', 'woocommerce_product_category', 100 );
 
 	/**
 	 * Display WooCommerce subcategories

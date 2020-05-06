@@ -255,6 +255,32 @@ form.cart {
 
 /* Other customs */
 
+ul.subcategory-list {
+	@media (max-width: 767px) {
+		display: none;
+	}
+  margin: 0;
+  list-style: none;
+	display: flex;
+	justify-content: center;
+	& .sub-item {
+		cursor: pointer;
+		margin: 0;
+		padding: 5px 10px;
+		transition: background-color 0.2s ease-out;
+		& a {
+			text-decoration: none;
+			font-size: 14px;
+			font-family: $font-button;
+			color: $color-primary;
+		}
+		&:hover {
+			background-color: rgba(0,0,0,0.1);
+		}
+	}
+
+}
+
 .front-page {
   overflow: visible;
 	padding-bottom: 50px;
@@ -339,7 +365,10 @@ form.cart {
 .woocommerce .header-image {
   width: 100%;
   object-fit: none;
-  height: 100%;
+	height: 100%;
+	@media (min-width: 768px) {
+		object-fit: cover;
+	}
 }
 
 .text-area {
