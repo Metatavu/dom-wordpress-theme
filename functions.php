@@ -58,6 +58,21 @@
 	add_action( 'woocommerce_archive_description', 'woocommerce_product_category', 100 );
 	add_action( 'woocommerce_after_main_content', 'woocommerce_product_category', 100 );
 
+	function before_shop_item_div() {
+		echo '<div class="product-img">';
+	}
+
+	function after_shop_item_div() {
+		echo '</div>';
+	}
+
+	function before_shop_item_title_div() {
+		echo '</div><div class="product-details">';
+	}
+	add_action( 'woocommerce_before_shop_loop_item', 'before_shop_item_div', 100 );
+	add_action( 'woocommerce_before_shop_loop_item_title', 'before_shop_item_title_div', 100 );
+	add_action( 'woocommerce_after_shop_loop_item', 'after_shop_item_div', 100 );
+
 	/**
 	 * Display WooCommerce subcategories
 	 */
