@@ -4670,6 +4670,20 @@ article.page {
   .woocommerce ul.products[class*=columns-] li.product:nth-of-type(2n), .woocommerce-page ul.products[class*=columns-] li.product:nth-of-type(2n) {
     padding: 1em; } }
 
+a.button.product_type_simple {
+  background-color: #EF4036;
+  color: #fff;
+  font-size: 12px;
+  height: 35px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-out; }
+  a.button.product_type_simple:hover {
+    text-decoration: none;
+    background-color: #e03e34; }
+
 .front-page .woocommerce {
   margin: 0 auto;
   max-width: 1200px;
@@ -4812,7 +4826,10 @@ form.cart {
   form.cart .button.alt {
     margin: 0 !important;
     background-color: #EF4036;
-    font-size: 12px; }
+    font-size: 12px;
+    transition: background-color 0.2s ease-out; }
+    form.cart .button.alt:hover {
+      background-color: #e03e34; }
 
 .woocommerce-billing-fields,
 .woocommerce-additional-fields,

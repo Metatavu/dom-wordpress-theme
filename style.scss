@@ -102,6 +102,22 @@ article.page {
 	}
 }
 
+a.button.product_type_simple {
+  background-color: #EF4036;
+  color: #fff;
+  font-size: 12px;
+  height: 35px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+	align-items: center;
+	transition: background-color 0.2s ease-out;
+	&:hover {
+		text-decoration: none;
+		background-color: #e03e34;
+	}
+}
+
 .front-page .woocommerce {
   margin: 0 auto;
   max-width: 1200px;
@@ -271,6 +287,10 @@ form.cart {
 		margin: 0 !important;
 		background-color: $color-primary;
 		font-size: 12px;
+		transition: background-color 0.2s ease-out;
+		&:hover {
+			background-color: #e03e34;
+		}
 	}
 }
 
