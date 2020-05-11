@@ -5,7 +5,7 @@
   Author:       Metatavu Oy
   Author URI:   https://metatavu.fi
   Template:     twentytwenty
-  Version:      1.0.0
+  Version:      1.0.1
   License:      GNU Affero General Public License v3
   License URI:  https://www.gnu.org/licenses/agpl-3.0.en.html
   Text Domain:  dom
@@ -109,6 +109,28 @@ article.page {
 	& .products {
 		justify-content: center;
 	}
+}
+
+.front-page .wc-block-product-search {
+	width: 90%;
+  max-width: 600px;
+	margin: 5rem auto 0;
+	& label {
+		font-family: "Montserrat_black";
+		display: block;
+		font-size: 26px;
+		font-weight: 400;
+		margin: 2rem auto;
+		text-align: center;
+	}
+}
+
+.wc-block-product-search .wc-block-product-search__field {
+  padding: 6px 12px;
+  line-height: 1.8;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  font-family: "Roboto_light";
 }
 
 .front-page .woocommerce ul.products li.product-category a h2.woocommerce-loop-category__title {
@@ -322,12 +344,10 @@ h1.entry-title {
 }
 
 ul.subcategory-list {
-	@media (max-width: 767px) {
-		display: none;
-	}
   margin: 0;
   list-style: none;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	& .sub-item {
 		cursor: pointer;
@@ -361,6 +381,30 @@ h1.woocommerce-products-header__title.page-title {
 	@media (min-width: 768px) {
 		font-size: 6rem;
 	}
+}
+
+.woocommerce .woocommerce-products-header__title.page-title, .woocommerce-page .woocommerce-products-header__title.page-title {
+	@media (max-width: 766px) {
+		display: none;
+	}
+}
+
+.woocommerce .woocommerce-breadcrumb, .woocommerce-page .woocommerce-breadcrumb {
+	font-family: "Roboto_bold";
+	@media (max-width: 766px) {
+		margin-bottom: 1rem;
+		font-family: "Roboto_bold";
+	}
+	& a {
+		font-family: "Roboto_regular";
+		text-decoration: none;
+	}
+}
+
+select.orderby {
+  border: 1px solid rgba(0,0,0,0.2);
+	padding: 10px;
+	font-family: "Roboto_regular";
 }
 
 .inner-page {
@@ -399,7 +443,7 @@ h1.woocommerce-products-header__title.page-title {
 	left: 0,;
 	right: 0;
 	z-index: 1000;
-	background-color: #191919;
+	background-color: rgba(25, 25, 25, 0.6);
 	display: flex;
 	justify-content: flex-end;
 }
