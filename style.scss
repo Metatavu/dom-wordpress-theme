@@ -5,7 +5,7 @@
   Author:       Metatavu Oy
   Author URI:   https://metatavu.fi
   Template:     twentytwenty
-  Version:      0.0.3
+  Version:      1.0.0
   License:      GNU Affero General Public License v3
   License URI:  https://www.gnu.org/licenses/agpl-3.0.en.html
   Text Domain:  dom
@@ -191,6 +191,11 @@ section.related.products h2 {
 .single-product .entry-title {
 	font-family: $font-text-header;
 	font-size: 35px;
+}
+
+h1.product_title.entry-title {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 ul.products li.product .woocommerce-loop-product__link {
