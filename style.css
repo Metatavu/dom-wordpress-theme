@@ -6,7 +6,7 @@
   Author:       Metatavu Oy
   Author URI:   https://metatavu.fi
   Template:     twentytwenty
-  Version:      1.0.0
+  Version:      1.0.1
   License:      GNU Affero General Public License v3
   License URI:  https://www.gnu.org/licenses/agpl-3.0.en.html
   Text Domain:  dom
@@ -4670,12 +4670,45 @@ article.page {
   .woocommerce ul.products[class*=columns-] li.product:nth-of-type(2n), .woocommerce-page ul.products[class*=columns-] li.product:nth-of-type(2n) {
     padding: 1em; } }
 
+a.button.product_type_simple {
+  background-color: #EF4036;
+  color: #fff;
+  font-size: 12px;
+  height: 35px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-out; }
+  a.button.product_type_simple:hover {
+    text-decoration: none;
+    background-color: #e03e34; }
+
 .front-page .woocommerce {
   margin: 0 auto;
   max-width: 1200px;
   width: 100%; }
   .front-page .woocommerce .products {
     justify-content: center; }
+
+.front-page .wc-block-product-search {
+  width: 90%;
+  max-width: 600px;
+  margin: 5rem auto 0; }
+  .front-page .wc-block-product-search label {
+    font-family: "Montserrat_black";
+    display: block;
+    font-size: 26px;
+    font-weight: 400;
+    margin: 2rem auto;
+    text-align: center; }
+
+.wc-block-product-search .wc-block-product-search__field {
+  padding: 6px 12px;
+  line-height: 1.8;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  font-family: "Roboto_light"; }
 
 .front-page .woocommerce ul.products li.product-category a h2.woocommerce-loop-category__title {
   position: absolute;
@@ -4793,7 +4826,10 @@ form.cart {
   form.cart .button.alt {
     margin: 0 !important;
     background-color: #EF4036;
-    font-size: 12px; }
+    font-size: 12px;
+    transition: background-color 0.2s ease-out; }
+    form.cart .button.alt:hover {
+      background-color: #e03e34; }
 
 .woocommerce-billing-fields,
 .woocommerce-additional-fields,
@@ -4859,10 +4895,8 @@ ul.subcategory-list {
   margin: 0;
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center; }
-  @media (max-width: 767px) {
-    ul.subcategory-list {
-      display: none; } }
   ul.subcategory-list .sub-item {
     cursor: pointer;
     margin: 0;
@@ -4888,6 +4922,25 @@ h1.woocommerce-products-header__title.page-title {
   @media (min-width: 768px) {
     h1.woocommerce-products-header__title.page-title {
       font-size: 6rem; } }
+
+@media (max-width: 766px) {
+  .woocommerce .woocommerce-products-header__title.page-title, .woocommerce-page .woocommerce-products-header__title.page-title {
+    display: none; } }
+
+.woocommerce .woocommerce-breadcrumb, .woocommerce-page .woocommerce-breadcrumb {
+  font-family: "Roboto_bold"; }
+  @media (max-width: 766px) {
+    .woocommerce .woocommerce-breadcrumb, .woocommerce-page .woocommerce-breadcrumb {
+      margin-bottom: 1rem;
+      font-family: "Roboto_bold"; } }
+  .woocommerce .woocommerce-breadcrumb a, .woocommerce-page .woocommerce-breadcrumb a {
+    font-family: "Roboto_regular";
+    text-decoration: none; }
+
+select.orderby {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  font-family: "Roboto_regular"; }
 
 .inner-page {
   padding: 0; }
@@ -4920,7 +4973,7 @@ h1.woocommerce-products-header__title.page-title {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: #191919;
+  background-color: rgba(25, 25, 25, 0.6);
   display: flex;
   justify-content: flex-end; }
 
