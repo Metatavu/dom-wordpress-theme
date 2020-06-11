@@ -32,7 +32,7 @@
 			<div class="image-container">
 				<img class="header-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/bar-dom-verkkokauppa.jpg" alt="bar dom header background" />
 				<a class="header-logo" href="<?php echo home_url(); ?>">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/dom-logo.svg" alt="bar dom verkkokauppa takeaway" />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/dom-logo-white.svg" alt="bar dom verkkokauppa takeaway" />
 				</a>
 				<div class="top-bar">
 					<!-- Shopping cart link -->

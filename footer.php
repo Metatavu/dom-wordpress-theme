@@ -15,7 +15,7 @@
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="footer-logo">
 					<div class="footer-logo-content">
-						<img class="footer-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/DOM-bar-logo.svg" alt="bar dom logo" />
+						<img class="footer-image" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/svg/dom-logo-black.svg" alt="bar dom logo" />
 						<p>&copy; DOM Mikkeli</p>
 						<a href="<?php echo home_url();?>/privacy-policy">Tietosuojaseloste</a>
 					</div>
