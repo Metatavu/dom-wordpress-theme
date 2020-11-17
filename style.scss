@@ -122,8 +122,12 @@ a.button.product_type_simple {
   margin: 0 auto;
   max-width: 1200px;
 	width: 100%;
+	&:first-child {
+		margin-bottom: 30px;
+	}
 	& .products {
 		justify-content: center;
+		margin-bottom: 30px;
 	}
 }
 
@@ -156,7 +160,8 @@ a.button.product_type_simple {
   transform: translateY(-50%);
   font-family: $font-text-header;
   color: $color-text-light;
-  text-decoration: none;
+	text-decoration: none;
+	text-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
 .front-page .woocommerce ul.products li.product {
