@@ -124,6 +124,9 @@ a.button.product_type_simple {
 	width: 100%;
 	&:first-child {
 		margin-bottom: 30px;
+		@media (min-width: 500) {
+			margin-bottom: 0;
+		}
 	}
 	& .products {
 		justify-content: center;
@@ -161,6 +164,18 @@ a.button.product_type_simple {
   font-family: $font-text-header;
   color: $color-text-light;
 	text-decoration: none;
+	text-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.front-page .woocommerce.columns-5 ul.products.columns-5 li.product-category a h2.woocommerce-loop-category__title {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: $font-text-header;
+	color: $color-text-light;
+	text-decoration: none;
+	font-size: 2.5rem;
 	text-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
