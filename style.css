@@ -6,7 +6,7 @@
   Author:       Metatavu Oy
   Author URI:   https://metatavu.fi
   Template:     twentytwenty
-  Version:      1.0.3
+  Version:      1.0.4
   License:      GNU Affero General Public License v3
   License URI:  https://www.gnu.org/licenses/agpl-3.0.en.html
   Text Domain:  dom
@@ -4688,8 +4688,14 @@ a.button.product_type_simple {
   margin: 0 auto;
   max-width: 1200px;
   width: 100%; }
+  .front-page .woocommerce:first-child {
+    margin-bottom: 30px; }
+    @media (min-width: 500) {
+      .front-page .woocommerce:first-child {
+        margin-bottom: 0; } }
   .front-page .woocommerce .products {
-    justify-content: center; }
+    justify-content: center;
+    margin-bottom: 30px; }
 
 .front-page .wc-block-product-search {
   width: 90%;
@@ -4717,7 +4723,19 @@ a.button.product_type_simple {
   transform: translateY(-50%);
   font-family: "Montserrat_bold";
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.5); }
+
+.front-page .woocommerce.columns-5 ul.products.columns-5 li.product-category a h2.woocommerce-loop-category__title {
+  position: absolute;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Montserrat_bold";
+  color: #fff;
+  text-decoration: none;
+  font-size: 2.5rem;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.5); }
 
 .front-page .woocommerce ul.products li.product {
   margin: 0;
